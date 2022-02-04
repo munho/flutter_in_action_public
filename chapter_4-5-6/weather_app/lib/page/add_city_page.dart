@@ -65,7 +65,7 @@ class _AddNewCityPageState extends State<AddNewCityPage> {
                     labelText: "City name",
                   ),
                   autofocus: true,
-                  autovalidate: _formChanged,
+                  autovalidateMode: AutovalidateMode.always, //_formChanged,
                   validator: (String val) {
                     if (val.isEmpty) return "Field cannot be left blank";
                     return null;

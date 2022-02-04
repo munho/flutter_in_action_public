@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/models/src/app_settings.dart';
 import 'package:weather_app/models/src/weather.dart';
-import 'package:weather_app/utils/date_utils.dart';
+import 'package:weather_app/utils/date_utils.dart' as _weather_date_utils;
 import 'package:weather_app/utils/forecast_animation_utils.dart';
 import 'package:weather_app/widget/color_transition_icon.dart';
 import 'package:weather_app/widget/color_transition_text.dart';
@@ -27,7 +27,7 @@ class ForecastTableView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var textStyle = Theme.of(context).textTheme.body1;
+    var textStyle = Theme.of(context).textTheme.bodyText1;
     return Padding(
       padding: const EdgeInsets.only(
         left: 24.0,
@@ -51,7 +51,7 @@ class ForecastTableView extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(4.0),
                   child: ColorTransitionText(
-                    text: DateUtils.weekdays[dailyWeather.dateTime.weekday],
+                    text: _weather_date_utils.DateUtils.weekdays[dailyWeather.dateTime.weekday],
                     style: textStyle,
                     animation: textColorTween.animate(controller),
                   ),
