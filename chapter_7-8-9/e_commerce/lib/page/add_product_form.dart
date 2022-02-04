@@ -130,7 +130,7 @@ class _AddProductFormState extends State<AddProductForm> {
           helperText: "Required",
         ),
         keyboardType: TextInputType.numberWithOptions(),
-        autovalidate: true,
+        autovalidateMode: AutovalidateMode.always,
         validator: (String val) {
           if (val.isEmpty) {
             return "Field cannot be left blank";
